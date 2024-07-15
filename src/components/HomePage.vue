@@ -6,9 +6,9 @@
                 <i class="fa-solid fa-square-plus"></i>                
             </FormContent>
 
-            <TaskList>
+            <FormContent>
                 <TaskPage />
-            </TaskList>
+            </FormContent>
         </MainSection>
         
     </div>
@@ -16,7 +16,7 @@
   
 <script>
 
-import { MainSection, FormContent, Input, TaskList } from '@/StyledComponents/StyledComponents';
+import { MainSection, FormContent, Input,  } from '@/StyledComponents/StyledComponents';
 import TaskPage from './TaskPage.vue'
   export default {
 
@@ -24,7 +24,7 @@ import TaskPage from './TaskPage.vue'
         MainSection,
         FormContent,
         Input,
-        TaskList,
+        // TaskList,
         TaskPage,
     } 
   };

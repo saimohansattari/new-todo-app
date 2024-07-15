@@ -38,12 +38,16 @@ flex-direction: column;
 gap: 20px;
 background-color: whitesmoke;
 display: flex;
+display: flex;
+justify-content: center;
+align-items: center;
 `
 
 
 export const TaskCard = styled.div`
-width: 80%;
+width: 85%;
 padding: 20px 15px;
 background-color: white;
+text-align: start;
 
 `
