@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fa-square-plus {
+    font-size: 52px;
+    color: rgb(68, 98, 199);
+    margin-left: 15px;
+    cursor: pointer;
+}
+
