@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+
+.fa-solid{
+    cursor: pointer;
+}
 .fa-square-plus {
     font-size: 52px;
     color: rgb(68, 98, 199);
@@ -11,3 +15,11 @@
     cursor: pointer;
 }
 
+
+.fa-pen-to-square{
+    color: greenyellow;
+}
+
+.fa-trash{
+    color: rgb(255, 21, 21);
+}

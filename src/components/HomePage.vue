@@ -1,9 +1,9 @@
 <template>
-    <div>
+    
         <MainSection>
-            <FormContent>
-                <Input placeholder="Tasks(Reading Book at 6PM..)"/>
-                <i class="fa-solid fa-square-plus"></i>                
+            <FormContent >
+                <Input v-model="newTask"  placeholder="Tasks(Reading Book at 6PM..)"/>
+                <i @click="AddTodo(newTask)" class="fa-solid fa-square-plus"></i>                
             </FormContent>
 
             <FormContent>
@@ -11,7 +11,7 @@
             </FormContent>
         </MainSection>
         
-    </div>
+    
 </template>
   
 <script>
@@ -26,7 +26,30 @@ import TaskPage from './TaskPage.vue'
         Input,
         // TaskList,
         TaskPage,
-    } 
+    },
+
+
+    data() {
+        return {
+            newTask : '',
+            TodoData : []
+        }
+    },
+
+    methods : {
+        saveDB(){
+            localStorage.setItem('TodoData', JSON.stringify(this.TodoData))
+        },
+
+        AddTodo() {
+            if(this.newTask.trim()){
+                this.TodoData.push(this.newTask);
+                this.newTask = '';
+                this.saveDB();
+            }
+        } 
+    }
+
   };
 </script>
   

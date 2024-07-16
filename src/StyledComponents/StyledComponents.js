@@ -12,7 +12,7 @@ align-items: center;
 `;
 
 export const FormContent = styled.div`
-width: 50%;
+width: 50vw;
 padding: 50px 25px;
 background-color: whitesmoke;
 display: flex;
@@ -45,9 +45,18 @@ align-items: center;
 
 
 export const TaskCard = styled.div`
-width: 85%;
+width: 38vw;
 padding: 20px 15px;
 background-color: white;
 text-align: start;
+display: flex;
+justify-content: space-between;
+`;
 
+
+export const TaskIcons = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
 `
