@@ -7,7 +7,7 @@
             </FormContent>
 
             <FormContent>
-                <TaskPage :tasks = "TodoData" @delete-Task = "deleteTask" @edit-task = 'editTask' />
+                <TaskPage :tasks = "TodoData" @delete-Task = "deleteTask" @edit-task = 'editTask' @toggle-completed="toggleCompletedTask" />
             </FormContent>
         </MainSection>
         
@@ -19,7 +19,7 @@
 import { MainSection, FormContent, Input,  } from '@/StyledComponents/StyledComponents';
 import TaskPage from './TaskPage.vue'
 import { useToast } from 'vue-toastification';
-
+import { confetti } from '@tsparticles/confetti';
 
 
   export default {
@@ -53,7 +53,7 @@ import { useToast } from 'vue-toastification';
                     this.editIndex = null;
                     useToast().warning("Task Updated!")
                 } else {
-                    this.TodoData.push(this.newTask);
+                    this.TodoData.push({ text: this.newTask, completed: false });
                     useToast().success("Task Added")
                 }
                 this.newTask = '';
@@ -61,13 +61,25 @@ import { useToast } from 'vue-toastification';
             }
 
 
-            const todos = localStorage.getItem('TodoData!')
+           
+        },
 
-            if(todos) {
-                this.TodoData = JSON.parse(todos);
+
+
+        loadDB(){
+            const todos = localStorage.getItem('TodoData')
+
+            if (todos) {
+            this.TodoData = JSON.parse(todos);
+            } else {
+                this.TodoData = []; // Initialize with an empty array if no data found
             }
 
             console.warn(todos)
+        },
+
+        created() {
+            this.loadDB();
         },
 
 
@@ -81,9 +93,21 @@ import { useToast } from 'vue-toastification';
         editTask(index) {
             this.newTask = this.TodoData[index],
             this.editIndex = index
-            // useToast().warning("Task Updated!")
+        },
+
+        toggleCompletedTask(index) {
+            
+        const blaskConfetti = confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 },
+        });
+        this.TodoData[index].completed = !this.TodoData[index].completed;
+        this.saveDB();
+        blaskConfetti;
         }
     }
+    
 
   };
 </script>

@@ -25,6 +25,32 @@
 }
 
 
+#text{
+    padding: 5px 0px;
+    display: flex;
+    gap: 20px;
+}
+
+button{
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+
+    &:hover {
+        color: white;
+        background-color: rgb(68, 98, 199);
+    }
+}
+
+
+.completed {
+    text-decoration: line-through;
+   
+  }
+
+
 
 
 

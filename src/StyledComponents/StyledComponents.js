@@ -9,6 +9,10 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+
+@media only screen and (max-width: 700px) {
+    padding: 145px 5px 5px 5px;
+}
 `;
 
 export const FormContent = styled.div`
@@ -18,6 +22,10 @@ background-color: whitesmoke;
 display: flex;
 justify-content: center;
 align-items: center;
+
+@media only screen and (max-width: 700px) {
+    width: 90%;
+}
 `;
 
 export const Input = styled.input`
@@ -33,6 +41,7 @@ border-radius: 15px;
 
 
 export const TaskList = styled.div`
+width: 100%;
 display: flex;
 flex-direction: column;
 gap: 20px;
@@ -46,17 +55,29 @@ align-items: center;
 
 export const TaskCard = styled.div`
 width: 38vw;
-padding: 20px 15px;
+padding: 10px;
 background-color: white;
 text-align: start;
 display: flex;
+flex-wrap: wrap;
 justify-content: space-between;
+
+@media only screen and (max-width: 700px) {
+    width: 90%;
+}
+`;
+
+export const TaskText = styled.div`
+width: 73%;
+height: auto;
+overflow-wrap: break-word;
+padding: 8px 0px;
 `;
 
 
 export const TaskIcons = styled.div`
 display: flex;
-justify-content: center;
+flex-direction: column;
+justify-content: space-between;
 align-items: center;
-gap: 20px;
 `
