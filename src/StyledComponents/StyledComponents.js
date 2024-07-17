@@ -11,7 +11,7 @@ justify-content: center;
 align-items: center;
 
 @media only screen and (max-width: 700px) {
-    padding: 145px 5px 5px 5px;
+    padding: 110px 5px 5px 5px;
 }
 `;
 
