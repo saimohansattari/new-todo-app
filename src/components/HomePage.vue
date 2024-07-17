@@ -18,6 +18,10 @@
 
 import { MainSection, FormContent, Input,  } from '@/StyledComponents/StyledComponents';
 import TaskPage from './TaskPage.vue'
+import { useToast } from 'vue-toastification';
+
+
+
   export default {
 
     components : {
@@ -47,14 +51,17 @@ import TaskPage from './TaskPage.vue'
                 if(this.editIndex !== null){
                     this.TodoData[this.editIndex] = this.newTask;
                     this.editIndex = null;
+                    useToast().warning("Task Updated!")
                 } else {
                     this.TodoData.push(this.newTask);
+                    useToast().success("Task Added")
                 }
                 this.newTask = '';
                 this.saveDB();
             }
 
-            const todos = localStorage.getItem('TodoData')
+
+            const todos = localStorage.getItem('TodoData!')
 
             if(todos) {
                 this.TodoData = JSON.parse(todos);
@@ -67,12 +74,14 @@ import TaskPage from './TaskPage.vue'
         deleteTask(index) {
             this.TodoData.splice(index,1)
             this.saveDB();
+            useToast().error("Task Delated!")
         },
 
 
         editTask(index) {
             this.newTask = this.TodoData[index],
             this.editIndex = index
+            // useToast().warning("Task Updated!")
         }
     }
 
