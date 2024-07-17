@@ -106,7 +106,7 @@ display: flex;
 justify-content: space-between;
 
 @media only screen and (max-width: 500px) {
-    padding: 20px 20px;
+    padding: 20px 50px;
 }
 
 `
@@ -119,12 +119,13 @@ export const Logo = styled.div`
 export const HeaderText = styled.div`
 display: flex;
 flex-direction: column;
+font-weight:bolder;
 gap: 5px;
 `;
 
 export const TextS = styled.p`
 font-size: small;
-    font-weight:bold;
+    font-weight:bolder;
     color: green;
     font-family: cursive;
     @media only screen and (max-width: 500px) {
