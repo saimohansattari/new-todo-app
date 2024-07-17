@@ -7,7 +7,7 @@
             </FormContent>
 
             <FormContent>
-                <TaskPage />
+                <TaskPage :tasks = "TodoData" @delete-Task = "deleteTask" @edit-task = 'editTask' />
             </FormContent>
         </MainSection>
         
@@ -32,7 +32,8 @@ import TaskPage from './TaskPage.vue'
     data() {
         return {
             newTask : '',
-            TodoData : []
+            TodoData : [],
+            editIndex : null,
         }
     },
 
@@ -43,11 +44,36 @@ import TaskPage from './TaskPage.vue'
 
         AddTodo() {
             if(this.newTask.trim()){
-                this.TodoData.push(this.newTask);
+                if(this.editIndex !== null){
+                    this.TodoData[this.editIndex] = this.newTask;
+                    this.editIndex = null;
+                } else {
+                    this.TodoData.push(this.newTask);
+                }
                 this.newTask = '';
                 this.saveDB();
             }
-        } 
+
+            const todos = localStorage.getItem('TodoData')
+
+            if(todos) {
+                this.TodoData = JSON.parse(todos);
+            }
+
+            console.warn(todos)
+        },
+
+
+        deleteTask(index) {
+            this.TodoData.splice(index,1)
+            this.saveDB();
+        },
+
+
+        editTask(index) {
+            this.newTask = this.TodoData[index],
+            this.editIndex = index
+        }
     }
 
   };
