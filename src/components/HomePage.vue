@@ -40,8 +40,9 @@ export default {
                     this.TodoData[this.editIndex].text = this.newTask;
                     this.editIndex = null;
                     useToast().warning("Task Updated!");
+                    
                 } else {
-                    this.TodoData.push({ text: this.newTask, completed: false });
+                    this.TodoData.push({ text: this.newTask, completed: false,  timestamp:this.timeStamp() });
                     useToast().success("Task Added");
                 }
                 this.newTask = '';
@@ -78,6 +79,11 @@ export default {
             this.saveDB();
             blackConfetti;
         },
+
+        timeStamp() {
+            const date = new Date();
+            return date.toLocaleString();
+        }
     },
     mounted() {
         this.loadDB();

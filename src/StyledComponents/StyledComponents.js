@@ -79,6 +79,12 @@ overflow-wrap: break-word;
 padding: 8px 0px;
 `;
 
+export const smallText = styled.p`
+color: gray;
+font-size: x-small;
+
+`
+
 
 export const TaskIcons = styled.div`
 display: flex;

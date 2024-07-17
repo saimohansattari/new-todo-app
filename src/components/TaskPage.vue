@@ -2,7 +2,7 @@
 
         <TaskList>
             <TaskCard v-for="(task, index) in tasks" :key="index">
-                <TaskText :class="{ completed: task.completed }">{{task.text}}</TaskText>
+                <TaskText :class="{ completed: task.completed }">{{task.text}}  <smallText> {{ task.timestamp }}</smallText></TaskText>
                  
                  <TaskIcons>
 
@@ -24,21 +24,22 @@
 </template>
 
 <script>
-import {TaskCard, TaskList,TaskText, TaskIcons} from '../StyledComponents/StyledComponents.js'
+import {TaskCard, TaskList,TaskText, TaskIcons, smallText} from '../StyledComponents/StyledComponents.js'
 
 export default {
     components : {
         TaskCard,
         TaskList,
         TaskIcons,
-        TaskText
+        TaskText,
+        smallText
     },
 
     props : {
         tasks : {
             type: Array,
             required : true
-        }
+        } 
     },
 
     
