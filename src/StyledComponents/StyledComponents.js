@@ -82,6 +82,7 @@ padding: 8px 0px;
 export const smallText = styled.p`
 color: gray;
 font-size: x-small;
+margin-top: 5px;
 
 `
 
