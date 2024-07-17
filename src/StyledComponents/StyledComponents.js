@@ -37,6 +37,11 @@ border: none;
 text-decoration: none;
 background-color: white;
 border-radius: 15px;
+
+@media only screen and (max-width: 700px) {
+    font-size: 13px;
+}
+
 `;
 
 
@@ -68,7 +73,7 @@ justify-content: space-between;
 `;
 
 export const TaskText = styled.div`
-width: 73%;
+width: 66%;
 height: auto;
 overflow-wrap: break-word;
 padding: 8px 0px;
