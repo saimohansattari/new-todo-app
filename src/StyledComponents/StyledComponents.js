@@ -11,7 +11,7 @@ justify-content: center;
 align-items: center;
 
 @media only screen and (max-width: 700px) {
-    padding: 110px 5px 5px 5px;
+    padding: 30px 5px 5px 5px;
 }
 `;
 
@@ -92,4 +92,56 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
+`;
+
+
+//HeaderPage Styled Components
+
+export const Header = styled.div`
+width: 100%;
+padding: 20px 85px;
+background-color: white;
+border-bottom: 1px solid gray;
+display: flex;
+justify-content: space-between;
+
+@media only screen and (max-width: 500px) {
+    padding: 20px 20px;
+}
+
 `
+
+export const Logo = styled.div`
+/* width: 200px; */
+`
+
+
+export const HeaderText = styled.div`
+display: flex;
+flex-direction: column;
+gap: 5px;
+`;
+
+export const TextS = styled.p`
+font-size: small;
+    font-weight:bold;
+    color: green;
+    font-family: cursive;
+    @media only screen and (max-width: 500px) {
+    font-size:10px;
+    
+}
+
+`;
+
+export const TextXX = styled.p`
+    font-size: larger;
+    font-weight:bold;
+    color: rgb(68, 98, 199);
+
+    @media only screen and (max-width: 500px) {
+    font-size:small;
+    font-family: cursive;
+}
+
+`;
