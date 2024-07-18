@@ -28,11 +28,10 @@ align-items: center;
 }
 `;
 
-
 export const SubDiv = styled.div`
 display: flex;
 flex-direction: column;
-`
+`;
 
 export const Input = styled.input`
 color: gray;
@@ -47,9 +46,7 @@ border-radius: 15px;
 @media only screen and (max-width: 700px) {
     font-size: 13px;
 }
-
 `;
-
 
 export const TaskList = styled.div`
 width: 100%;
@@ -61,8 +58,7 @@ display: flex;
 display: flex;
 justify-content: center;
 align-items: center;
-`
-
+`;
 
 export const TaskCard = styled.div`
 width: 38vw;
@@ -89,9 +85,7 @@ export const smallText = styled.p`
 color: gray;
 font-size: x-small;
 margin-top: 5px;
-
-`
-
+`;
 
 export const TaskIcons = styled.div`
 display: flex;
@@ -99,7 +93,6 @@ flex-direction: column;
 justify-content: space-between;
 align-items: center;
 `;
-
 
 //HeaderPage Styled Components
 
@@ -118,7 +111,7 @@ justify-content: space-between;
 `
 
 export const Logo = styled.div`
-/* width: 200px; */
+
 `
 
 
@@ -127,7 +120,6 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 font-weight:bolder;
-/* gap: 5px; */
 `;
 
 export const TextS = styled.p`
@@ -136,10 +128,8 @@ font-size: small;
     color: green;
     font-family: cursive;
     @media only screen and (max-width: 500px) {
-    font-size:10px;
-    
+    font-size:10px;    
 }
-
 `;
 
 export const TextXX = styled.p`
@@ -147,11 +137,7 @@ export const TextXX = styled.p`
     font-weight:bold;
     color: rgb(68, 98, 199);
     font-family: Montserrat,sans-serif;
-
-
     @media only screen and (max-width: 500px) {
-    font-size:small;
-    
+    font-size:small;  
 }
-
 `;

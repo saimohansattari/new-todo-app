@@ -4,11 +4,9 @@
             <Input v-model="newTask" placeholder="Tasks (e.g., Reading Book at 6PM...)" />
             <i @click="AddTodo" class="fa-solid fa-square-plus"></i>
         </FormContent>
-
         <FormContent>
             <hr>
-        </FormContent>
-        
+        </FormContent>       
         <FormContent>          
             <TaskPage :tasks="TodoData" @delete-Task="deleteTask" @edit-task="editTask" @toggle-completed="toggleCompletedTask" />
         </FormContent>
@@ -60,7 +58,7 @@ export default {
             if (todos) {
                 this.TodoData = JSON.parse(todos);
             } else {
-                this.TodoData = []; // Initialize with an empty array if no data found
+                this.TodoData = []; 
             }
         },
         mounted() {

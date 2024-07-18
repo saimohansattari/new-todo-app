@@ -5,23 +5,20 @@
     font-family: Montserrat,sans-serif;
 }
 
-
 #extraStyle{
     padding-top: 50px;
 }
 
-
-
 .fa-solid{
     cursor: pointer;
 }
+
 .fa-square-plus {
     font-size: 52px;
     color: rgb(68, 98, 199);
     margin-left: 15px;
     cursor: pointer;
 }
-
 
 .fa-pen-to-square{
     color: greenyellow;
@@ -30,7 +27,6 @@
 .fa-trash{
     color: rgb(214, 24, 24);
 }
-
 
 #text{
     padding: 5px 0px;
@@ -51,12 +47,10 @@ button{
     }
 }
 
-
 .completed {
     text-decoration: line-through;
    
 }
-
 
 img {
     width: 80px;
