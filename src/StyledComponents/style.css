@@ -6,6 +6,10 @@
 }
 
 
+#extraStyle{
+    padding-top: 50px;
+}
+
 
 
 .fa-solid{
@@ -53,13 +57,24 @@ button{
    
 }
 
+
 img {
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-    border: 1px solid #d9e0f7;
-    transform: scale(1.2); /* Adjust the scale as needed */
-  transition: transform 0.3s ease-in-out;
+    width: 80px;
+    height: 90px;
+
+
+    @media only screen and (max-width: 500px) {
+    width: 44px;  
+    height: 60px;
+}
+    
+}
+
+
+hr {
+    width: 90%;
+    border-radius: 15px;
+    border: 5px solid rgb(68, 98, 199);
 }
 
 

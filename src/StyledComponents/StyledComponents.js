@@ -17,7 +17,7 @@ align-items: center;
 
 export const FormContent = styled.div`
 width: 50vw;
-padding: 50px 25px;
+padding: 10px 25px;
 background-color: whitesmoke;
 display: flex;
 justify-content: center;
@@ -27,6 +27,12 @@ align-items: center;
     width: 90%;
 }
 `;
+
+
+export const SubDiv = styled.div`
+display: flex;
+flex-direction: column;
+`
 
 export const Input = styled.input`
 color: gray;
@@ -106,7 +112,7 @@ display: flex;
 justify-content: space-between;
 
 @media only screen and (max-width: 500px) {
-    padding: 20px 50px;
+    padding: 20px 40px;
 }
 
 `
@@ -118,9 +124,10 @@ export const Logo = styled.div`
 
 export const HeaderText = styled.div`
 display: flex;
+justify-content: center;
 flex-direction: column;
 font-weight:bolder;
-gap: 5px;
+/* gap: 5px; */
 `;
 
 export const TextS = styled.p`
@@ -139,10 +146,12 @@ export const TextXX = styled.p`
     font-size: larger;
     font-weight:bold;
     color: rgb(68, 98, 199);
+    font-family: Montserrat,sans-serif;
+
 
     @media only screen and (max-width: 500px) {
     font-size:small;
-    font-family: cursive;
+    
 }
 
 `;

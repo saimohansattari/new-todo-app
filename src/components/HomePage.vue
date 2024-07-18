@@ -1,10 +1,15 @@
 <template>
     <MainSection>
-        <FormContent>
+        <FormContent id="extraStyle">
             <Input v-model="newTask" placeholder="Tasks (e.g., Reading Book at 6PM...)" />
             <i @click="AddTodo" class="fa-solid fa-square-plus"></i>
         </FormContent>
+
         <FormContent>
+            <hr>
+        </FormContent>
+        
+        <FormContent>          
             <TaskPage :tasks="TodoData" @delete-Task="deleteTask" @edit-task="editTask" @toggle-completed="toggleCompletedTask" />
         </FormContent>
     </MainSection>
@@ -22,6 +27,7 @@ export default {
         FormContent,
         Input,
         TaskPage,
+     
     },
     data() {
         return {
