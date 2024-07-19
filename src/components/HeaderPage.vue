@@ -1,11 +1,11 @@
 <template>
     <Header>
         <Logo>
-            <img src="../assets/logo.jpg" alt="">
+            <img src="../assets/logo.png" alt="">
         </Logo>
         <HeaderText>
             <TextXX>Your Personal Task Manager..</TextXX>
-            <TextS>🥳Turn Plans into Action!🫰😉</TextS>
+            <TextS>🥳Turn Your Plans into Action!🫰😉</TextS>
         </HeaderText>
     </Header>
 </template>

@@ -65,7 +65,7 @@ export default {
             this.loadDB();
         },
         deleteTask(index) {
-            this.TodoData.splice(index, 1);
+            this.TodoData.splice(index, 1);  
             this.saveDB();
             useToast().error("Task Deleted!");
         },

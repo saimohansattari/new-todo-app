@@ -4,7 +4,7 @@ export const MainSection = styled.div`
 width: 100%;
 height: 100%;
 padding: 20px;
-background-color: white;
+background-color: transparent;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -99,13 +99,13 @@ align-items: center;
 export const Header = styled.div`
 width: 100%;
 padding: 20px 85px;
-background-color: white;
-border-bottom: 1px solid gray;
+background-color: transparent;
+box-shadow: 1px 1px 10px white;
 display: flex;
 justify-content: space-between;
 
 @media only screen and (max-width: 500px) {
-    padding: 20px 40px;
+    padding: 20px 30px;
 }
 
 `
@@ -125,8 +125,8 @@ font-weight:bolder;
 export const TextS = styled.p`
 font-size: small;
     font-weight:bolder;
-    color: green;
-    font-family: cursive;
+    color: white;
+    font-family: Montserrat,sans-serif;
     @media only screen and (max-width: 500px) {
     font-size:10px;    
 }
@@ -135,9 +135,9 @@ font-size: small;
 export const TextXX = styled.p`
     font-size: larger;
     font-weight:bold;
-    color: rgb(68, 98, 199);
+    color: white;
     font-family: Montserrat,sans-serif;
     @media only screen and (max-width: 500px) {
-    font-size:small;  
+    font-size:15px;  
 }
 `;
