@@ -100,7 +100,6 @@ export const Header = styled.div`
 width: 100%;
 padding: 20px 85px;
 background-color: transparent;
-box-shadow: 1px 1px 10px white;
 display: flex;
 justify-content: space-between;
 

@@ -22,7 +22,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 40vh;
+    height: 360px;
     background: linear-gradient(180deg, rgb(0 26 116) 100%, transparent 50%);
     border-bottom-left-radius: 30px; 
     border-bottom-right-radius: 30px; 
@@ -86,13 +86,13 @@ button{
 }
 
 img {
-    width: 80px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
 
 
     @media only screen and (max-width: 500px) {
-    width: 60px;  
-    height: 60px;
+    width: 50px;  
+    height: 50px;
 }
     
 }
